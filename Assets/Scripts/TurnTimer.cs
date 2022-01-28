@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TurnTimer : MonoBehaviour
 {
 
-    public float turnTime = 3f;
+    public float turnTime = 5f;
     public Text turnText;
     public TurnState currentTurn = TurnState.Evil;
 
