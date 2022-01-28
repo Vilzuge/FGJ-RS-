@@ -7,14 +7,8 @@ public class TurnTimer : MonoBehaviour
 {
 
     public float turnTime = 3f;
-    public bool isEvilTurn = true;
     public Text turnText;
-
-    public enum TurnState
-    {
-        Good,
-        Evil
-    }
+    public TurnState currentTurn = TurnState.Evil;
 
     void Update()
     {
@@ -28,20 +22,29 @@ public class TurnTimer : MonoBehaviour
         }
     }
 
-    public void ChangeTurn()
+    private void ChangeTurn()
     {
-        isEvilTurn = !isEvilTurn;
-        
-        if (isEvilTurn)
+        switch (currentTurn)
         {
-            turnText.text = "EVIL";
+            case TurnState.Evil:
+                turnText.text = "NORMAL";
+                Debug.Log("Normal turn started");
+                currentTurn = TurnState.Good;
+                break;
+            case TurnState.Good:
+                turnText.text = "EVIL";
+                currentTurn = TurnState.Evil;
+                Debug.Log("Evil turn started");
+                break;
+            default: 
+                Debug.Log("Wut? :D");
+                break;
         }
-
-        if (!isEvilTurn)
-        {
-            turnText.text = "NORMAL";
-        }
-
         turnTime = 3f;
+    }
+
+    public TurnState GetCurrentTurn()
+    {
+        return currentTurn;
     }
 }
