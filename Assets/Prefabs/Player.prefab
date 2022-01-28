@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1749393118034285694}
   - component: {fileID: 1749393118034285693}
   - component: {fileID: 1749393118034285692}
+  - component: {fileID: 4349920190594259051}
   - component: {fileID: 1749393118034285667}
   - component: {fileID: 1749393118034285665}
   - component: {fileID: 1749393118034285666}
@@ -100,6 +101,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+--- !u!114 &4349920190594259051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749393118034285664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9319bc0625452c34e96660f8372f3d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnTime: 7
+  turnText: {fileID: 0}
+  currentTurn: 1
 --- !u!114 &1749393118034285667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +164,7 @@ MonoBehaviour:
   moveSpeed: 10
   rb: {fileID: 1749393118034285665}
   movement: {x: 0, y: 0}
+  turnTimer: {fileID: 0}
 --- !u!58 &-3618563296612258269
 CircleCollider2D:
   m_ObjectHideFlags: 0
