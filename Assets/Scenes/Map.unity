@@ -638,6 +638,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9319bc0625452c34e96660f8372f3d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnTime: 5
-  isEvilTurn: 1
+  turnTime: 7
   turnText: {fileID: 628095921}
+  currentTurn: 1
