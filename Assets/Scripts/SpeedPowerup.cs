@@ -15,6 +15,7 @@ public class SpeedPowerup : MonoBehaviour
             if (movementScript)
             {
                 movementScript.moveSpeed += increase;
+                Destroy(gameObject);
             }
         }
     }
