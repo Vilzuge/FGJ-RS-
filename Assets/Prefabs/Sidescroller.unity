@@ -128,17 +128,6 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: -8929475422690156623, guid: 1b05ee0000017db4894655ffef2df033, type: 3}
   m_PrefabInstance: {fileID: 1084968797}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &76025721 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3945703861178736144, guid: 1b05ee0000017db4894655ffef2df033, type: 3}
-  m_PrefabInstance: {fileID: 1084968797}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9319bc0625452c34e96660f8372f3d7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &76025722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4419648372247543523, guid: 1b05ee0000017db4894655ffef2df033, type: 3}
@@ -808,6 +797,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8252637820629592404, guid: 65a70ebb8ced29148958137ede994727, type: 3}
   m_PrefabInstance: {fileID: 919713777}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1011533860 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5163611103516383183, guid: 1b05ee0000017db4894655ffef2df033, type: 3}
+  m_PrefabInstance: {fileID: 1084968797}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6851d4243a3844dbecbe6d6a8e44cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1018216164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -999,6 +999,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5163611103516383183, guid: 1b05ee0000017db4894655ffef2df033, type: 3}
+      propertyPath: turnText
+      value: 
+      objectReference: {fileID: 1485497087}
     - target: {fileID: 8698547893567260790, guid: 1b05ee0000017db4894655ffef2df033, type: 3}
       propertyPath: rb
       value: 
@@ -1006,11 +1010,11 @@ PrefabInstance:
     - target: {fileID: 8698547893567260790, guid: 1b05ee0000017db4894655ffef2df033, type: 3}
       propertyPath: turn
       value: 
-      objectReference: {fileID: 76025721}
+      objectReference: {fileID: 1011533860}
     - target: {fileID: 8698547893567260790, guid: 1b05ee0000017db4894655ffef2df033, type: 3}
       propertyPath: turnTimer
       value: 
-      objectReference: {fileID: 76025721}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b05ee0000017db4894655ffef2df033, type: 3}
 --- !u!4 &1129673695 stripped

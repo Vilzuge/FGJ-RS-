@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4419648372247543523}
-  - component: {fileID: 3945703861178736144}
   - component: {fileID: 3422199651541705373}
   - component: {fileID: 8698547893567260790}
+  - component: {fileID: 5163611103516383183}
   - component: {fileID: -601323001311323452}
   - component: {fileID: -8929475422690156623}
   m_Layer: 0
@@ -35,21 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3945703861178736144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293298401160180016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9319bc0625452c34e96660f8372f3d7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnTime: 7
-  turnText: {fileID: 0}
-  currentTurn: 1
 --- !u!212 &3422199651541705373
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -116,7 +101,22 @@ MonoBehaviour:
   moveSpeed: 10
   jumpForce: 15
   rb: {fileID: 0}
-  turnTimer: {fileID: 0}
+  turn: {fileID: 0}
+--- !u!114 &5163611103516383183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293298401160180016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6851d4243a3844dbecbe6d6a8e44cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnTime: 5
+  turnText: {fileID: 0}
+  currentTurn: 0
 --- !u!61 &-601323001311323452
 BoxCollider2D:
   m_ObjectHideFlags: 0
