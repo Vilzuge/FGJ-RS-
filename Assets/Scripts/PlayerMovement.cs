@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 10f;
     public float jumpForce = 15f;
+    public Animator animator;
     
     private Rigidbody2D rb;
     private float movement;
