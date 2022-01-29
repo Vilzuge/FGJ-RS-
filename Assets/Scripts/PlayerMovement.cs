@@ -75,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Dark", true);
             rb.gravityScale = -5f;
             jumpForce = -20;
+            movement *= (-1);
 
             sprite.flipY = true;
 

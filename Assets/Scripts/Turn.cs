@@ -12,13 +12,15 @@ public class Turn : MonoBehaviour
     private Text turnText;
     public TurnState currentTurn = TurnState.Dark;
     private GameObject environment;
-
+    
     private void Start()
     {
         environment = GameObject.Find("Environment");
         turnText = GameObject.Find("Text").GetComponent<Text>();
     }
 
+    
+    
     void Update()
     {
         if (turnTime >= 0)
@@ -31,7 +33,7 @@ public class Turn : MonoBehaviour
         }
     }
 
-    private void ChangeTurn()
+    public void ChangeTurn()
     {
         switch (currentTurn)
         {
@@ -46,7 +48,7 @@ public class Turn : MonoBehaviour
                 ToggleColor();
                 break;
             default: 
-                Debug.Log("Wut? :D");
+                Debug.Log("Error");
                 break;
         }
         turnTime = 5f;
