@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer renderer;
     
     private Rigidbody2D rb;
-    private float movement;
+    public float movement;
     private Turn turn;
 
     private bool isGrounded;
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Speed-left", Mathf.Abs(movement));
         }
 
-        if (isGrounded == true)
+        if (isGrounded)
         {
             extraJumps = extraJumpsValue;
         }
@@ -66,24 +66,26 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.gravityScale = -5f;
             jumpForce = -20;
+            movement *= (-1);
 
             renderer.flipY = true;
-
-
+            
             if (Input.GetButtonDown("Jump"))
             {
                 Jump();
             }
-
         }
-
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        rb.velocity = new Vector2(movement * moveSpeed, rb.velocity.y);
     }
 
+    /*
     void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         rb.velocity = new Vector2(movement * moveSpeed, rb.velocity.y);
     }
+    */
 
     void Jump()
     {
@@ -96,6 +98,5 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
         }
-
     }
 }

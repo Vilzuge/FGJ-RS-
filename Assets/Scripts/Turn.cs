@@ -12,20 +12,13 @@ public class Turn : MonoBehaviour
     private Text turnText;
     public TurnState currentTurn = TurnState.Dark;
     private GameObject environment;
-    public Sprite newSprite;
-
+    
     private void Start()
     {
         environment = GameObject.Find("Environment");
         turnText = GameObject.Find("Text").GetComponent<Text>();
-        
     }
-
-
-    private void SetSprite()
-    {
-        
-    }
+    
 
     void Update()
     {
