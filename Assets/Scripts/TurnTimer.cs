@@ -27,12 +27,12 @@ public class TurnTimer : MonoBehaviour
         switch (currentTurn)
         {
             case TurnState.Evil:
-                turnText.text = "NORMAL";
+                turnText.text = "DARK";
                 Debug.Log("Normal turn started");
                 currentTurn = TurnState.Good;
                 break;
             case TurnState.Good:
-                turnText.text = "EVIL";
+                turnText.text = "BRIGHT";
                 currentTurn = TurnState.Evil;
                 Debug.Log("Evil turn started");
                 break;
