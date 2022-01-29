@@ -18,6 +18,7 @@ public class Turn : MonoBehaviour
         environment = GameObject.Find("Environment");
         turnText = GameObject.Find("Text").GetComponent<Text>();
     }
+
     
     
     void Update()

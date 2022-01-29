@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Switcher : MonoBehaviour
 {
-
-    public Turn currentTurn;
-    // Start is called before the first frame update
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,7 +17,10 @@ public class Switcher : MonoBehaviour
             }
         }
     }
-    
-    
 
+
+    void Update()
+    {
+        transform.Rotate(0,0,1 );
+    }
 }
