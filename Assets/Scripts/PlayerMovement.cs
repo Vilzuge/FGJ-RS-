@@ -6,8 +6,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 10f;
+    public float jumpForce = 15f;
     public Rigidbody2D rb;
-    public Vector2 movement;
+    float movement;
     public TurnTimer turnTimer;
 
     private void Start()
@@ -19,20 +20,31 @@ public class PlayerMovement : MonoBehaviour
     {
         if (turnTimer.GetCurrentTurn() == TurnState.Evil)
         {
-            movement.x = Input.GetAxisRaw("HorizontalEvil");
-            movement.y = Input.GetAxisRaw("VerticalEvil");
+            movement = Input.GetAxis("HorizontalEvil");
+            if (Input.GetButtonDown("Jump"))
+            {
+                Jump();
+            }
         }
         
         if (turnTimer.GetCurrentTurn() == TurnState.Good)
         {
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.y = Input.GetAxisRaw("Vertical");
+            movement = Input.GetAxis("Horizontal");
+            if (Input.GetButtonDown("Jump"))
+            {
+                Jump();
+            }
         }
         
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.velocity = new Vector2(movement * moveSpeed * Time.fixedDeltaTime, rb.velocity.y);
+    }
+
+    void Jump()
+    {
+        rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
     }
 }
