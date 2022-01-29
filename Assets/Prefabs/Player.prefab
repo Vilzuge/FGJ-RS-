@@ -133,7 +133,7 @@ MonoBehaviour:
   moveSpeed: 10
   jumpForce: 15
   animator: {fileID: 8765593059142112365}
-  renderer: {fileID: 8765593059142112360}
+  sprite: {fileID: 8765593059142112360}
   groundCheck: {fileID: 8765593059037327415}
   checkRadius: 0.5
   whatIsGround:
