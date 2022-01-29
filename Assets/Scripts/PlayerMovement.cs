@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (turnTimer.GetCurrentTurn() == TurnState.Evil)
         {
-            movement = Input.GetAxis("HorizontalEvil");
+            movement = Input.GetAxis("Horizontal");
             if (Input.GetButtonDown("Jump"))
             {
                 Jump();
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(movement * moveSpeed * Time.fixedDeltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(movement * moveSpeed, rb.velocity.y);
     }
 
     void Jump()
