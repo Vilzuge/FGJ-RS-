@@ -11,7 +11,7 @@ public class Turn : MonoBehaviour
     
     public Text turnText;
     public TurnState currentTurn = TurnState.Dark;
-    public GameObject environment;
+    private GameObject environment;
 
     private void Start()
     {
@@ -58,18 +58,17 @@ public class Turn : MonoBehaviour
         
         foreach (Transform child in environment.transform)
         {
-            SpriteRenderer sr = child.GetComponent<SpriteRenderer>();
+            var sr = child.GetComponent<SpriteRenderer>();
 
             if (sr.color == Color.white)
             {
                 sr.color = Color.black;
-                sr.sortingOrder = 1;
-            }
-
-            if (sr.color == Color.black)
+                //sr.sortingOrder = 1;
+            } 
+            else if (sr.color == Color.black)
             {
                 sr.color = Color.white;
-                sr.sortingOrder = 0;
+                //sr.sortingOrder = 0;
             }
         }
     }
