@@ -9,13 +9,14 @@ public class Turn : MonoBehaviour
 
     public float turnTime = 5f;
     
-    public Text turnText;
+    private Text turnText;
     public TurnState currentTurn = TurnState.Dark;
     private GameObject environment;
 
     private void Start()
     {
         environment = GameObject.Find("Environment");
+        turnText = GameObject.Find("Text").GetComponent<Text>();
     }
 
     void Update()
