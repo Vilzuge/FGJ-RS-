@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 10f;
     public float jumpForce = 15f;
     public Animator animator;
-    public SpriteRenderer renderer;
+    public SpriteRenderer sprite;
     
     private Rigidbody2D rb;
     private float movement;
@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
             rb.gravityScale = 5f;
             jumpForce = 20;
 
-            renderer.flipY = false;
+            sprite.flipY = false;
            
             if (Input.GetButtonDown("Jump"))
             {
@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
             rb.gravityScale = -5f;
             jumpForce = -20;
 
-            renderer.flipY = true;
+            sprite.flipY = true;
 
 
             if (Input.GetButtonDown("Jump"))
