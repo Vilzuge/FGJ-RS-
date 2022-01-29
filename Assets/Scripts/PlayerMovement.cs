@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (turnTimer.GetCurrentTurn() == TurnState.Evil)
         {
-            movement = Input.GetAxis("HorizontalEvil");
+            movement = Input.GetAxis("Horizontal");
             if (Input.GetButtonDown("Jump"))
             {
                 Jump();
