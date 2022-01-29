@@ -8,13 +8,15 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 10f;
     public float jumpForce = 15f;
-    public Rigidbody2D rb;
-    float movement;
-    public Turn turn;
+    
+    private Rigidbody2D rb;
+    private float movement;
+    private Turn turn;
 
     private void Start()
     {
         turn = GetComponent<Turn>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
