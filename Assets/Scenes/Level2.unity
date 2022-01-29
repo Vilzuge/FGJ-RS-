@@ -1069,11 +1069,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8252637820629592404, guid: 65a70ebb8ced29148958137ede994727, type: 3}
   m_PrefabInstance: {fileID: 765473046}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &819652307 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2644634779910375467, guid: 1b05ee0000017db4894655ffef2df033, type: 3}
-  m_PrefabInstance: {fileID: 1731029906}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &942768568 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8252637820629592404, guid: 65a70ebb8ced29148958137ede994727, type: 3}
@@ -1208,6 +1203,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65a70ebb8ced29148958137ede994727, type: 3}
+--- !u!4 &1130084394 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2087841279815599957, guid: 1b05ee0000017db4894655ffef2df033, type: 3}
+  m_PrefabInstance: {fileID: 1731029906}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1151576680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8252637820629592404, guid: 65a70ebb8ced29148958137ede994727, type: 3}
@@ -1648,6 +1648,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2087841279815599957, guid: 1b05ee0000017db4894655ffef2df033, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087841279815599957, guid: 1b05ee0000017db4894655ffef2df033, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087841279815599960, guid: 1b05ee0000017db4894655ffef2df033, type: 3}
+      propertyPath: turnText
+      value: 
+      objectReference: {fileID: 1859278676}
     - target: {fileID: 2644634779910375462, guid: 1b05ee0000017db4894655ffef2df033, type: 3}
       propertyPath: turnText
       value: 
@@ -2049,7 +2061,7 @@ PrefabInstance:
     - target: {fileID: 6129325878306299531, guid: d2d7da6da7b738c42a6c5b19ec1b82f5, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 819652307}
+      objectReference: {fileID: 1130084394}
     - target: {fileID: 6129325878306299543, guid: d2d7da6da7b738c42a6c5b19ec1b82f5, type: 3}
       propertyPath: m_Name
       value: Main Camera
