@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     float movement;
     public Turn turn;
+    public Animator animator;
 
     private bool isGrounded;
     public Transform groundCheck;
@@ -27,6 +28,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        movement = Input.GetAxis("Horizontal");
+        if(movement > 0)
+        {
+            animator.SetFloat("Speed", Mathf.Abs(movement));
+        }
+        
+        if(movement < 0)
+        {
+            animator.SetFloat("Speed-left", Mathf.Abs(movement));
+        }
 
         if (isGrounded == true)
         {
@@ -38,7 +49,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.gravityScale = 5f;
             jumpForce = 20;
-            movement = Input.GetAxis("Horizontal");
             if (Input.GetButtonDown("Jump"))
             {
                 Jump();
@@ -49,7 +59,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.gravityScale = -5f;
             jumpForce = -20;
-            movement = Input.GetAxis("Horizontal");
             if (Input.GetButtonDown("Jump"))
             {
                 Jump();
