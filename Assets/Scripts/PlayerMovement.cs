@@ -31,11 +31,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        movement = Input.GetAxis("Horizontal");
+        movement = Input.GetAxisRaw("Horizontal");
+        Debug.Log(movement);
 
         if (movement > 0)
         {
             animator.SetFloat("Speed", Mathf.Abs(movement));
+        }
+
+        if (movement == 0)
+        {
+            animator.SetFloat("Speed", Mathf.Abs(movement));
+            animator.SetFloat("Speed-left", Mathf.Abs(movement));
         }
 
         if (movement < 0)
@@ -51,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (turn.GetCurrentTurn() == TurnState.Dark)
         {
+            animator.SetBool("Dark", false);
             rb.gravityScale = 5f;
             jumpForce = 20;
 
@@ -64,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (turn.GetCurrentTurn() == TurnState.Bright)
         {
+            animator.SetBool("Dark", true);
             rb.gravityScale = -5f;
             jumpForce = -20;
 
