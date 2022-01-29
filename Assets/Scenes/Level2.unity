@@ -573,7 +573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8252637820629592404, guid: 65a70ebb8ced29148958137ede994727, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.66
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 8252637820629592404, guid: 65a70ebb8ced29148958137ede994727, type: 3}
       propertyPath: m_LocalPosition.z
@@ -775,7 +775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8252637820629592404, guid: 65a70ebb8ced29148958137ede994727, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.64
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 8252637820629592404, guid: 65a70ebb8ced29148958137ede994727, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1022,7 +1022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8252637820629592404, guid: 65a70ebb8ced29148958137ede994727, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.65
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 8252637820629592404, guid: 65a70ebb8ced29148958137ede994727, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1416,7 +1416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8252637820629592404, guid: 65a70ebb8ced29148958137ede994727, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.64
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 8252637820629592404, guid: 65a70ebb8ced29148958137ede994727, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2149,7 +2149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4579005618059718490, guid: 173b92d8dbc63be4db6d6382f4c5650b, type: 3}
       propertyPath: m_SpriteTilingProperty.drawMode
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4579005618059718490, guid: 173b92d8dbc63be4db6d6382f4c5650b, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
