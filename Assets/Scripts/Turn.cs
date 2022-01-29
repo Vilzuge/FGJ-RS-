@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TurnTimer : MonoBehaviour
+public class Turn : MonoBehaviour
 {
 
-    public float turnTime = 7f;
+    public float turnTime = 5f;
     public Text turnText;
-    public TurnState currentTurn = TurnState.Evil;
+    public TurnState currentTurn = TurnState.Dark;
 
     void Update()
     {
@@ -26,21 +26,19 @@ public class TurnTimer : MonoBehaviour
     {
         switch (currentTurn)
         {
-            case TurnState.Evil:
+            case TurnState.Dark:
                 turnText.text = "DARK";
-                Debug.Log("Normal turn started");
-                currentTurn = TurnState.Good;
+                currentTurn = TurnState.Bright;
                 break;
-            case TurnState.Good:
+            case TurnState.Bright:
                 turnText.text = "BRIGHT";
-                currentTurn = TurnState.Evil;
-                Debug.Log("Evil turn started");
+                currentTurn = TurnState.Dark;
                 break;
             default: 
                 Debug.Log("Wut? :D");
                 break;
         }
-        turnTime = 3f;
+        turnTime = 5f;
     }
 
     public TurnState GetCurrentTurn()

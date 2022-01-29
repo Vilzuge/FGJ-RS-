@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,17 +10,19 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 15f;
     public Rigidbody2D rb;
     float movement;
-    public TurnTimer turnTimer;
+    public Turn turn;
 
     private void Start()
     {
-        turnTimer = GetComponent<TurnTimer>();
+        turn = GetComponent<Turn>();
     }
 
     void Update()
     {
-        if (turnTimer.GetCurrentTurn() == TurnState.Evil)
+        if (turn.GetCurrentTurn() == TurnState.Dark)
         {
+            rb.gravityScale = 5f;
+            jumpForce = 15;
             movement = Input.GetAxis("Horizontal");
             if (Input.GetButtonDown("Jump"))
             {
@@ -27,8 +30,10 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         
-        if (turnTimer.GetCurrentTurn() == TurnState.Good)
+        if (turn.GetCurrentTurn() == TurnState.Bright)
         {
+            rb.gravityScale = -5f;
+            jumpForce = -15;
             movement = Input.GetAxis("Horizontal");
             if (Input.GetButtonDown("Jump"))
             {
