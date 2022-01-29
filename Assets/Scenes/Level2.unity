@@ -1565,9 +1565,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1359927468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d147d5c86b8ef174888cb85e981c0730, type: 3}
+  m_Script: {fileID: 11500000, guid: b8d52a9fce4626948a985e8720ad2f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 0}
+  transitionTime: 1
 --- !u!4 &1395534376 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8252637820629592404, guid: 65a70ebb8ced29148958137ede994727, type: 3}
