@@ -218,7 +218,10 @@ Transform:
   - {fileID: 635811109}
   - {fileID: 781853188}
   - {fileID: 4239758}
+<<<<<<< Updated upstream
   - {fileID: 2017089265}
+=======
+>>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -821,6 +824,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8252637820629592404, guid: 65a70ebb8ced29148958137ede994727, type: 3}
   m_PrefabInstance: {fileID: 1969759511}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1001 &2017089264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -887,6 +891,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8252637820629592404, guid: 65a70ebb8ced29148958137ede994727, type: 3}
   m_PrefabInstance: {fileID: 2017089264}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &6129325877069646809
 PrefabInstance:
   m_ObjectHideFlags: 0
