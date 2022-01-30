@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 15f;
     public Animator animator;
     public SpriteRenderer sprite;
-    
+
     private Rigidbody2D rb;
     private float movement;
     private Turn turn;
@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         movement = Input.GetAxisRaw("Horizontal");
-        Debug.Log(movement);
+        
 
         if (movement > 0)
         {
@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
             jumpForce = 20;
 
             sprite.flipY = false;
-           
+
             if (Input.GetButtonDown("Jump"))
             {
                 Jump();
