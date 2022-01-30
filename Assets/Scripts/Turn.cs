@@ -26,6 +26,7 @@ public class Turn : MonoBehaviour
         if (turnTime >= 0)
         {
             turnTime -= Time.deltaTime;
+            turnText.text = Math.Round(turnTime, 0).ToString();
         }
         else
         {
@@ -38,12 +39,10 @@ public class Turn : MonoBehaviour
         switch (currentTurn)
         {
             case TurnState.Dark:
-                turnText.text = "DARK";
                 currentTurn = TurnState.Bright;
                 ToggleColor();
                 break;
             case TurnState.Bright:
-                turnText.text = "BRIGHT";
                 currentTurn = TurnState.Dark;
                 ToggleColor();
                 break;
