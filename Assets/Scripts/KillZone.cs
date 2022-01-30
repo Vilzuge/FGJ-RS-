@@ -13,12 +13,10 @@ public class KillZone : MonoBehaviour
             Destroy(player);
             LoadNextLevel();
         }
-        
-        
     }
     public void LoadNextLevel()
     {
+        Destroy(GameObject.FindGameObjectWithTag("Music"));
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
 }
