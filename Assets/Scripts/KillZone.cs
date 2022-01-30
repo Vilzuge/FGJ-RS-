@@ -16,7 +16,7 @@ public class KillZone : MonoBehaviour
     }
     public void LoadNextLevel()
     {
-        Destroy(GameObject.FindGameObjectWithTag("Music"));
+        //Destroy(GameObject.FindGameObjectWithTag("Music"));
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
